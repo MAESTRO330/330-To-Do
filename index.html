@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>330 To-Do</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <section class="left-menu">
+        <div class="left-menu__wrap">
+            <div class="left-menu__logo-box">
+                <div class="left-menu__logo">
+                    <img src="./assets/img/logo.png" alt="logo">
+                </div>
+                <h1 class="left-menu-title">
+                    330 To-Do
+                </h1>
+            </div>
+            <div class="left-menu__nav-box">
+                <nav class="left-menu__nav">
+                    <ul class="left-menu__menu">
+                        <ol class="left-menu__item left-menu__item_v">
+                            <a href="./index.html" class="left-menu__link"><img src="./assets/img/rocket.svg" alt="rocket"></a> <a href="./index.html" class="left-menu__link">Предстоящие задачи</a>
+                    </ul>
+                </nav>
+            
+                <div class="left-menu__profile">
+                    <div class="left-menu__profile__photo">
+                        <a href="./profile.html"><img src="./assets/img/photo.png" alt="photo"></a>
+                    </div>
+                    <div class="left-menu__profile__info">
+                        <a href="./profile.html" class="left-menu__profile__name">
+                            Артём Дерябин
+                        </a>
+                        <a href="./profile.html" class="left-menu__profile__email">
+                            artem.deryabinn@mail.rul
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-menu">
+        <hr>
+        <div class="container">
+            <div class="bottom-menu__wrap">
+                <nav class="bottom-menu__nav">
+                    <ul class="bottom-menu__menu">
+                        <li class="bottom-menu__item bottom-menu__item-task bottom-menu__item_v"><a href="./index.html"><img src="./assets/img/rocket.svg" alt="rocket"></a><a href="./index.html">Задачи</a></li>
+                        <li class="bottom-menu__item"><button type="button" class="bottom-menu__item-nt" onclick="window.new_task.showModal()">
+                            <img src="./assets/img/new task.svg" alt="new_task">
+                        </button></li>
+                        <li class="bottom-menu__item bottom-menu__item-profile"><a href="./profile.html"><img src="./assets/img/photo.png" alt="profile avatar"></a> <a href="./profile.html">Профиль</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <section class="search">
+        <div class="search__wrap">
+            <form action="#">
+                <input type="search" placeholder="Поиск" name="search" class="search__bar">
+                <button type="submit" class="search__btn"><img src="./assets/img/search.svg" alt="search"></button>              
+            </form>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="container">
+            <div class="main__wrap">
+                <div class="main__title">
+                    <h2 id="date"></h2>
+                </div>
+                <div class="main__tasks" id="task__list">
+                    
+                </div>
+                <div class="main__btn">
+                    <button type="button" class="main__new-task__btn" onclick="window.new_task.showModal()">
+                        <img src="./assets/img/new task.svg" alt="new_task">
+                    </button>
+                </div>
+                <div class="main__dialog1">
+                    <dialog id="new_task" class="main__new-task__form">
+                        <h2 class="main__new-task__form-title">Создать задачу</h2>
+                        <div class="main__dialog__form">
+                            <input type="text" id="task__title" placeholder="Название">
+                            <input type="text" id="task__disc" placeholder="Описание">
+                            <input type="date" id="deadline">
+                            <button type="button" class="main__dialog-close__btn" id="save__btn" onclick="window.new_task.close()">
+                                Создать 
+                            </button>
+                        </div>
+                    </dialog>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./assets/js/date.js" async></script>
+    <script src="./assets/js/task.js" async></script>
+</body>
+</html>

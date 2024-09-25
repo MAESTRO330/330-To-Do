@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <section class="left-menu">
+        <div class="left-menu__wrap">
+            <div class="left-menu__logo-box">
+                <div class="left-menu__logo">
+                    <img src="./assets/img/logo.png" alt="logo">
+                </div>
+                <h1 class="left-menu-title">
+                    330 To-Do
+                </h1>
+            </div>
+            <div class="left-menu__nav-box">
+                <nav class="left-menu__nav">
+                    <ul class="left-menu__menu">
+                        <ol class="left-menu__item">
+                            <a href="./index.html" class="left-menu__link"><img src="./assets/img/rocket.svg" alt="rocket"></a> <a href="./index.html" class="left-menu__link">Предстоящие задачи</a>
+                        </ol>
+                    </ul>
+                </nav>
+            
+                <div class="left-menu__profile left-menu__item_v">
+                    <div class="left-menu__profile__photo">
+                        <a href="./profile.html"><img src="./assets/img/photo.png" alt="photo"></a>
+                    </div>
+                    <div class="left-menu__profile__info">
+                        <a href="./profile.html" class="left-menu__profile__name">
+                            Артём Дерябин
+                        </a>
+                        <a href="./profile.html" class="left-menu__profile__email">
+                            artem.deryabinn@mail.rul
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-menu">
+        <hr>
+        <div class="container">
+            <div class="bottom-menu__wrap">
+                <nav class="bottom-menu__nav">
+                    <ul class="bottom-menu__menu">
+                        <li class="bottom-menu__item bottom-menu__item-task bottom-menu__item_v"><a href="./index.html"><img src="./assets/img/rocket.svg" alt="rocket"></a><a href="./index.html">Задачи</a></li>
+                        <li class="bottom-menu__item"><button type="button" class="bottom-menu__item-nt" onclick="window.new_task.showModal()">
+                            <img src="./assets/img/new task.svg" alt="new_task">
+                        </button></li>
+                        <li class="bottom-menu__item bottom-menu__item-profile"><a href="./profile.html"><img src="./assets/img/photo.png" alt="profile avatar"></a> <a href="./profile.html">Профиль</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <section class="search">
+        <div class="search__wrap">
+            <form action="#">
+                <input type="search" placeholder="Поиск" name="search" class="search__bar">
+                <button type="submit" class="search__btn"><img src="./assets/img/search.svg" alt="search"></button>              
+            </form>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="container">
+            <div class="main__wrap">
+                <div class="main__profile">
+                    <div class="main__title">
+                        <h2>Профиль</h2>
+                    </div>
+                    <div class="main__info">
+                        <div class="main__info-ava">
+                            <img src="./assets/img/photo.png" alt="ava">
+                        </div>
+                        <h3 class="main__info-fio">Артём Дерябин</h3>
+                    </div>
+                    <div class="main__email-block">
+                        <h3 class="main__email-title">
+                            Почта
+                        </h3>
+                        <p class="main__email">artem.deryabinn@mail.ru</p>
+                    </div>
+                    <div class="main__btns">
+                        <button type="button" class="main__btn__select__photo btn" onclick="window.select_image.showModal()">Сменить фото</button>
+                        <button type="button" class="main__btn__select__password btn" onclick="window.select_password.showModal()">Изменить пароль</button>
+                        <button type="button" class="main__btn__exit-account btn" onclick="window.exit_account.showModal()">Выйти из аккаунта</button>
+                    </div>   
+                    <dialog id="select_image" class="main__dialog__photo main__new-task__form">
+                        <div class="main__dialog__wrap">
+                            <h2>Загрузите новое фото</h2>
+                            <input type="file" accept=".jpg, .jpeg, .png">
+                            <button type="button" class="main__dialog__btn btn" onclick="window.select_image.close()">Сохранить</button>
+                        </div>
+                    </dialog>
+                    <dialog id="select_password" class="main__dialog__password main__new-task__form">
+                        <div class="main__dialog__wrap">
+                            <h2>Смена пароля</h2>
+                            <label for="new_pass">Введите новый пароль</label>
+                            <input type="password" id="new_pass">
+                            <label for="new_pass2">Повторите новый пароль</label>
+                            <input type="password" id="new_pass2">
+                            <button type="button" class="main__dialog__btn btn" onclick="window.select_password.close()">Сохранить</button>
+                        </div>
+                    </dialog>
+                    <dialog id="exit_account" class="main__dialog__exit-account main__new-task__form">
+                        <div class="main__dialog__wrap">
+                            <h2>Выход из аккаунта</h2>
+                            <p>Вы уверены, что хотите выйти из аккаунта?</p>
+                            <div class="main__dialog__btns">
+                                <button type="button" class="btn btn_g" onclick="window.exit_account.close()">Отмена</button>
+                                <button type="button" class="btn btn_r" onclick="window.exit_account.close()">Выйти</button>
+                            </div>
+                        </div>
+                    </dialog>
+                </div>
+                <div class="main__about-dev">
+                    <h2 class="main__about-dev-title">
+                        О создателе
+                    </h2>
+                    <div class="main__about-dev-vizit">
+                        <div class="main__about-dev-vizit-img">
+                            <img src="./assets/img/dev__photo.png" alt="developer photo">
+                        </div>
+                        <div class="main__about-dev-vizit-text">
+                            <p class="main__about-dev-vizit-p">
+                                Дерябин Артём Алексеевич
+                            </p>
+                            <div class="main__about-dev-vizit-soc">
+                                <div class="main__about-dev-vizit__tg__logo">
+                                    <a href="https://t.me/MAESTRO330"><img src="./assets/img/tg_logo.svg" alt="tg__logo"></a>
+                                </div>
+                                <a href="https://t.me/MAESTRO330" class="main__about-dev-vizit-p">@maestro330</a>
+                            </div>
+                            <div class="main__about-dev-vizit-soc">
+                                <div class="main__about-dev-vizit__vk__logo">
+                                    <a href="https://vk.com/maestro330"></a><img src="./assets/img/vk_logo.svg" alt="vk__logo">
+                                </div>
+                                <a href="https://vk.com/maestro330" class="main__about-dev-vizit-p">@maestro330</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <hr>
+                        <div class="footer__wrap">
+                            <div class="footer__link">
+                                <a href="./advantage.html" class="footer__item">Преимущества</a>
+                                <a href="./reviews.html" class="footer__item">Отзывы</a>
+                            </div>
+                            <p class="footer__disc">
+                                Хотите узнавать об обновлениях сайта?
+                                Подпишитесь на рассылку!
+                            </p>
+                            <div class="footer__subscribe">
+                                <input type="email" id="email" name="email" class="footer__subscribe__email" placeholder="Введите свой email">
+                                <button type="submit" id="save_email" class="footer__subscribe__btn btn">Подписаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
